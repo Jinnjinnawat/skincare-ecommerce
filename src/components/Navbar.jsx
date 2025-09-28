@@ -1,4 +1,4 @@
-// src/components/NavbarComponent.jsx
+import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -15,7 +15,7 @@ function NavbarComponent() {
       className="shadow-sm"
     >
       <Container>
-        <Navbar.Brand href="#">Skincare</Navbar.Brand>
+       <Navbar.Brand as={Link} to="/home">Skincare</Navbar.Brand>
 
         {/* ปุ่ม hamburger บนจอเล็ก */}
         <Navbar.Toggle aria-controls="main-navbar" />
@@ -24,9 +24,9 @@ function NavbarComponent() {
         <Navbar.Collapse id="main-navbar">
           {/* เมนูซ้าย */}
           <Nav className="me-auto">
-            <Nav.Link href="#home">หน้าหลัก</Nav.Link>
-            <Nav.Link href="#features">รายการสินค้า</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link as={Link} to="/home">หน้าหลัก</Nav.Link>
+            <Nav.Link as={Link} to="/Listproduct">รายการสินค้า</Nav.Link>
+            <Nav.Link as={Link} to="/home">Pricing</Nav.Link>
           </Nav>
 
           {/* เมนูขวา */}
