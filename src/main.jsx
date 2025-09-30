@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import Home from './page/Home'
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./style/admin.css";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

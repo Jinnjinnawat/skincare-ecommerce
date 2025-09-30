@@ -1,7 +1,7 @@
 // src/components/AdminSidebar.jsx
 import { Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { Link } from "react-router-dom";
 function AdminSidebar() {
   return (
     <div
@@ -13,7 +13,7 @@ function AdminSidebar() {
         <Nav.Link href="#dashboard" className="text-white mb-2">
           📊 Dashboard
         </Nav.Link>
-        <Nav.Link href="#products" className="text-white mb-2">
+        <Nav.Link as={Link} to="/TBproduct"className="text-white mb-2">
           🛍️ จัดการสินค้า
         </Nav.Link>
         <Nav.Link href="#orders" className="text-white mb-2">
